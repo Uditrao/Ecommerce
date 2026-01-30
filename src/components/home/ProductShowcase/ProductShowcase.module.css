@@ -1,0 +1,125 @@
+.showcase {
+    background-color: var(--color-bg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.imageWrapper {
+    position: relative;
+}
+
+.image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--color-cream) 0%, white 100%);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: var(--fs-lg);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.tag {
+    display: inline-block;
+    width: fit-content;
+    padding: 4px 12px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 100px;
+}
+
+.content h2 {
+    font-size: var(--fs-3xl);
+    margin: 0;
+}
+
+.description {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.benefits {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.priceRow {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+}
+
+.price {
+    font-size: var(--fs-2xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.perUse {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.cta {
+    display: inline-block;
+    width: fit-content;
+    padding: var(--space-md) var(--space-2xl);
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.cta:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .tag,
+    .cta {
+        align-self: center;
+    }
+
+    .benefits {
+        align-items: center;
+    }
+}

@@ -1,0 +1,57 @@
+/* =====================================================
+   OPTIMIZED IMAGE STYLES
+   ===================================================== */
+
+.container {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-border);
+}
+
+/* Placeholder blur effect */
+.placeholder {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            var(--color-border) 25%,
+            #f0f0f0 50%,
+            var(--color-border) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Image */
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image.loaded {
+    opacity: 1;
+}
+
+/* Error state */
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+}
+
+.errorText {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}

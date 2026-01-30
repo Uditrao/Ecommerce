@@ -1,0 +1,84 @@
+.section {
+    margin-top: var(--space-3xl);
+    padding: var(--space-xl);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+}
+
+.title {
+    margin-bottom: var(--space-lg);
+    font-size: var(--fs-lg);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+}
+
+.text p {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.text strong {
+    color: var(--color-primary);
+}
+
+.visual {
+    display: flex;
+    justify-content: center;
+}
+
+.diagram {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 200px;
+}
+
+.layer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.layerLabel {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.molecules,
+.structure,
+.trapped {
+    height: 30px;
+    width: 100%;
+    border-radius: var(--radius-sm);
+}
+
+.molecules {
+    background: repeating-linear-gradient(90deg, #e74c3c 0, #e74c3c 8px, transparent 8px, transparent 16px);
+}
+
+.structure {
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+.trapped {
+    background: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .visual {
+        order: -1;
+    }
+}

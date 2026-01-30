@@ -1,0 +1,279 @@
+/* Mission Section */
+.mission {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.mission h1 {
+    font-size: var(--fs-3xl);
+    max-width: 700px;
+    margin: 0 auto var(--space-lg);
+}
+
+.missionText {
+    font-size: var(--fs-lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Founder Section */
+.founderGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-3xl);
+    align-items: center;
+}
+
+.founderImage {
+    aspect-ratio: 1;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.imagePlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+}
+
+.label {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.founderContent h2 {
+    margin: var(--space-sm) 0 var(--space-lg);
+}
+
+.founderContent p {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+.signature {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--color-primary) !important;
+}
+
+/* Problem Section */
+.problem {
+    background-color: var(--color-bg);
+}
+
+.problem h2 {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.problemGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.problemCard {
+    text-align: center;
+    padding: var(--space-xl);
+    background-color: white;
+    border-radius: var(--radius-md);
+}
+
+.stat {
+    display: block;
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: #e74c3c;
+}
+
+.statLabel {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Solution Section */
+.solution h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.solutionContent {
+    max-width: 700px;
+}
+
+.solutionContent p {
+    margin-bottom: var(--space-md);
+    line-height: 1.7;
+    color: var(--color-text-muted);
+}
+
+/* Values Section */
+.values {
+    background-color: white;
+}
+
+.values h2 {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.valueCard {
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.valueIcon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.valueCard h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.valueCard p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* Manufacturing Section */
+.manufacturing h2 {
+    margin-bottom: var(--space-2xl);
+    text-align: center;
+}
+
+.mfgGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.mfgItem {
+    padding: var(--space-lg);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+.mfgItem h3 {
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+}
+
+.mfgItem p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}
+
+/* Impact Section */
+.impact {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.impact h2 {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.impactGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+    text-align: center;
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+}
+
+.metricValue {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+}
+
+.metricLabel {
+    font-size: var(--fs-sm);
+    opacity: 0.8;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+}
+
+.teamText {
+    max-width: 600px;
+    margin: var(--space-lg) auto 0;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--color-bg);
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: var(--space-sm);
+}
+
+.cta p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-lg);
+}
+
+.ctaBtn {
+    display: inline-block;
+    padding: var(--space-md) var(--space-2xl);
+    background-color: var(--color-primary);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.ctaBtn:hover {
+    background-color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .founderGrid,
+    .problemGrid,
+    .valuesGrid,
+    .mfgGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .impactGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mission h1 {
+        font-size: var(--fs-2xl);
+    }
+}

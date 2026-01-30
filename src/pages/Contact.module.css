@@ -1,0 +1,101 @@
+.contact {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+}
+
+.header h1 {
+    margin-bottom: var(--space-sm);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--space-3xl);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.textareaWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.label {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+}
+
+.textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-sm);
+    font-size: var(--fs-base);
+    font-family: inherit;
+    resize: vertical;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.infoCard {
+    padding: var(--space-lg);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+.infoCard h3 {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+}
+
+.infoCard p {
+    font-size: var(--fs-base);
+}
+
+.infoCard a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.success {
+    text-align: center;
+    padding: var(--space-3xl);
+    background-color: white;
+    border-radius: var(--radius-md);
+}
+
+.success h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

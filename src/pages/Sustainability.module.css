@@ -1,0 +1,395 @@
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--fs-3xl);
+    max-width: 800px;
+    margin: 0 auto var(--space-lg);
+}
+
+.heroText {
+    font-size: var(--fs-lg);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Shared Styles */
+.sectionIntro {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+/* Materials Section */
+.materialsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.materialCard {
+    padding: var(--space-lg);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+.materialCard h3 {
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-sm);
+    color: var(--color-primary);
+}
+
+.materialMeta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Lifecycle Section */
+.lifecycle {
+    background-color: var(--color-bg);
+}
+
+.lifecycleGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.lcCard {
+    text-align: center;
+    padding: var(--space-xl);
+    background-color: white;
+    border-radius: var(--radius-md);
+}
+
+.lcCard svg {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.lcCard h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.lcCard p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Reuse Section */
+.reuseGrid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.reuseCard {
+    text-align: center;
+    padding: var(--space-xl) var(--space-2xl);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+.bigNum {
+    display: block;
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.reuseLabel {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.equals {
+    font-size: var(--fs-3xl);
+    color: var(--color-text-muted);
+}
+
+/* Carbon Section */
+.carbon {
+    background-color: white;
+}
+
+.carbonContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+}
+
+.carbonText p {
+    margin-bottom: var(--space-sm);
+    font-size: var(--fs-sm);
+}
+
+.offset {
+    margin-top: var(--space-md);
+    padding: var(--space-md);
+    background-color: hsl(var(--color-forest-h), var(--color-forest-s), 90%);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.carbonVs h4 {
+    margin-bottom: var(--space-sm);
+}
+
+.carbonVs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.carbonVs li {
+    padding: var(--space-sm) 0;
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Packaging Section */
+.packagingGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-lg);
+}
+
+.packItem {
+    padding: var(--space-lg);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    text-align: center;
+}
+
+.packItem h3 {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+}
+
+.packItem p {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+/* Ethics Section */
+.ethics {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.ethicsList {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ethicsList li {
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: var(--fs-base);
+}
+
+/* Certifications Section */
+.certsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.certCard {
+    text-align: center;
+    padding: var(--space-xl);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+}
+
+.certIcon {
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.certCard h3 {
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-xs);
+}
+
+.certCard p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Roadmap Section */
+.roadmap {
+    background-color: var(--color-bg);
+}
+
+.roadmapGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+}
+
+.roadmapItem {
+    background-color: white;
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+}
+
+.status {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 100px;
+    margin-bottom: var(--space-sm);
+}
+
+.roadmapItem h3 {
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-xs);
+}
+
+.roadmapItem p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Customer Impact Section */
+.customerImpact {
+    background-color: white;
+}
+
+.impactCard {
+    text-align: center;
+    padding: var(--space-2xl);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-lg);
+}
+
+.impactCard>p {
+    margin-bottom: var(--space-xl);
+    font-size: var(--fs-lg);
+}
+
+.impactStats {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3xl);
+}
+
+.impactStats>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.impactNum {
+    font-size: var(--fs-3xl);
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Resources Section */
+.resourcesGrid {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.resourceLink {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.resourceLink:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* CTA Section */
+.cta {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: white;
+    padding: var(--space-3xl) 0;
+    text-align: center;
+}
+
+.cta h2 {
+    margin-bottom: var(--space-sm);
+}
+
+.cta p {
+    opacity: 0.9;
+    margin-bottom: var(--space-lg);
+}
+
+.ctaBtn {
+    display: inline-block;
+    padding: var(--space-md) var(--space-2xl);
+    background-color: white;
+    color: var(--color-primary);
+    font-weight: 700;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.ctaBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: var(--fs-2xl);
+    }
+
+    .materialsGrid,
+    .lifecycleGrid,
+    .packagingGrid,
+    .certsGrid,
+    .roadmapGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .carbonContent {
+        grid-template-columns: 1fr;
+    }
+
+    .impactStats {
+        flex-direction: column;
+        gap: var(--space-xl);
+    }
+}

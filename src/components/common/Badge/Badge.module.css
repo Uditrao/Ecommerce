@@ -1,0 +1,76 @@
+/* =====================================================
+   BADGE COMPONENT STYLES
+   Based on Design System Specification
+   ===================================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-uppercase);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+/* =====================================================
+   SIZES
+   ===================================================== */
+
+.sm {
+    padding: 2px 8px;
+    font-size: 10px;
+}
+
+.md {
+    padding: 4px 12px;
+    font-size: var(--fs-xs);
+}
+
+/* =====================================================
+   VARIANTS
+   ===================================================== */
+
+/* Default - Primary */
+.default {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Mint - Soft accent */
+.mint {
+    background-color: var(--color-mint);
+    color: var(--color-primary);
+}
+
+/* Sale - Warm Clay */
+.sale {
+    background-color: var(--color-clay);
+    color: var(--color-white);
+}
+
+/* Success - In stock, confirmations */
+.success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-success);
+}
+
+/* Error - Out of stock */
+.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--color-error);
+}
+
+/* Warning - Low stock */
+.warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--color-warning);
+}
+
+/* Info - Informational */
+.info {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--color-info);
+}

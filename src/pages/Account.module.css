@@ -1,0 +1,316 @@
+.accountPage {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xl);
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    gap: var(--space-md);
+    color: var(--color-text-muted);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--color-cream-d);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+}
+
+.profileCard,
+.addressCard,
+.ordersCard,
+.actionsCard {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--color-cream-d);
+}
+
+.ordersCard {
+    grid-column: 1 / -1;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    color: var(--color-primary);
+}
+
+.cardHeader h2 {
+    font-size: var(--fs-lg);
+    font-weight: 600;
+}
+
+/* Profile */
+.profileContent {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #333 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.profileInfo h3 {
+    font-size: var(--fs-lg);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.profileInfo p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+}
+
+.editBtn {
+    width: 100%;
+    padding: var(--space-sm);
+    background: transparent;
+    border: 2px solid var(--color-cream-d);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.editBtn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+/* Address */
+.addressContent {
+    margin-bottom: var(--space-md);
+}
+
+.addressLabel {
+    display: inline-block;
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    background: var(--color-cream-l);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.address p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+    line-height: 1.6;
+}
+
+/* Orders */
+.ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.orderItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: var(--color-cream-l);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.orderItem:hover {
+    background: var(--color-cream-d);
+}
+
+.orderInfo {
+    flex: 1;
+}
+
+.orderId {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-xs);
+}
+
+.orderDate {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.orderDetails {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.status {
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-full);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.status.delivered {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+}
+
+.status.intransit {
+    background: rgba(59, 130, 246, 0.1);
+    color: #2563eb;
+}
+
+.status.processing {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+}
+
+.orderTotal {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.orderItems {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.orderArrow {
+    color: var(--color-text-muted);
+}
+
+.emptyOrders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-xl);
+    color: var(--color-text-muted);
+    gap: var(--space-sm);
+}
+
+.shopLink {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.shopLink:hover {
+    text-decoration: underline;
+}
+
+/* Actions */
+.actionsCard h2 {
+    font-size: var(--fs-lg);
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.actionBtn,
+.logoutBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.actionBtn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.actionBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.2);
+}
+
+.logoutBtn {
+    background: transparent;
+    border: 2px solid var(--color-cream-d);
+    color: var(--color-secondary);
+}
+
+.logoutBtn:hover {
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ordersCard {
+        grid-column: 1;
+    }
+
+    .orderDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}

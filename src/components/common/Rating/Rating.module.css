@@ -1,0 +1,23 @@
+.rating {
+    display: inline-flex;
+    gap: 2px;
+}
+
+.star {
+    color: #ccc;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.star.filled {
+    color: var(--color-primary);
+}
+
+.star:not(:disabled) {
+    cursor: pointer;
+}
+
+.star:not(:disabled):hover {
+    transform: scale(1.1);
+}

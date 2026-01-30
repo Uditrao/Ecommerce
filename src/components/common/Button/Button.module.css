@@ -1,0 +1,182 @@
+/* =====================================================
+   BUTTON COMPONENT STYLES
+   Based on Design System Specification
+   ===================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    font-family: var(--font-family);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-button);
+    line-height: var(--lh-ui);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* =====================================================
+   VARIANTS
+   ===================================================== */
+
+/* Primary Button */
+.primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.primary:hover:not(:disabled) {
+    background-color: #185032;
+    /* 10% darker */
+    box-shadow: 0 4px 12px rgba(30, 95, 62, 0.25);
+    transform: translateY(-1px);
+}
+
+.primary:active:not(:disabled) {
+    background-color: #134228;
+    /* 15% darker */
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+/* Secondary Button */
+.secondary {
+    background-color: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+}
+
+.secondary:hover:not(:disabled) {
+    background-color: var(--color-border);
+}
+
+.secondary:active:not(:disabled) {
+    background-color: var(--color-text-muted);
+    color: var(--color-white);
+}
+
+/* Text Button */
+.text {
+    background: none;
+    color: var(--color-primary);
+    border: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.text:hover:not(:disabled) {
+    background-color: var(--color-mint);
+    text-decoration: none;
+    padding-left: var(--space-xs);
+    padding-right: var(--space-xs);
+}
+
+.text:active:not(:disabled) {
+    background-color: #96D4BE;
+    /* Darker mint */
+}
+
+/* Icon Button */
+.icon {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: var(--radius-full);
+    background: transparent;
+    color: var(--color-secondary);
+    border: none;
+}
+
+.icon:hover:not(:disabled) {
+    background-color: var(--color-border);
+}
+
+.icon:active:not(:disabled) {
+    background-color: var(--color-text-muted);
+    color: var(--color-white);
+}
+
+/* =====================================================
+   SIZES
+   ===================================================== */
+
+.sm {
+    padding: 8px 16px;
+    font-size: var(--fs-sm);
+}
+
+.md {
+    padding: 12px 24px;
+}
+
+/* Desktop: larger padding */
+@media (min-width: 1025px) {
+    .md {
+        padding: 14px 32px;
+    }
+}
+
+.lg {
+    padding: 16px 40px;
+    font-size: var(--fs-lg);
+}
+
+/* Adjust secondary for border */
+.secondary.sm {
+    padding: 6px 14px;
+}
+
+.secondary.md {
+    padding: 10px 22px;
+}
+
+.secondary.lg {
+    padding: 14px 38px;
+}
+
+@media (min-width: 1025px) {
+    .secondary.md {
+        padding: 12px 30px;
+    }
+}
+
+/* Text button sizes */
+.text.sm,
+.text.md,
+.text.lg {
+    padding: var(--space-sm) 0;
+}
+
+/* =====================================================
+   MODIFIERS
+   ===================================================== */
+
+.fullWidth {
+    width: 100%;
+}
+
+/* =====================================================
+   LOADING STATE
+   ===================================================== */
+
+.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.hiddenText {
+    visibility: hidden;
+}

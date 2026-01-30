@@ -1,0 +1,339 @@
+.registerPage {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl) var(--space-md);
+    background: linear-gradient(135deg, var(--color-cream-l) 0%, var(--color-cream-d) 100%);
+}
+
+.container {
+    width: 100%;
+    max-width: 520px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.header h1 {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.header p {
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+}
+
+.errorBanner {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-md);
+    font-size: var(--fs-sm);
+    text-align: center;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.nameRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-md);
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.inputGroup label {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.inputIcon {
+    position: absolute;
+    left: var(--space-sm);
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.inputWrapper input {
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    padding-left: calc(var(--space-sm) + 24px);
+    border: 2px solid var(--color-cream-d);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-base);
+    transition: all 0.2s ease;
+    background: var(--color-bg);
+}
+
+.inputWrapper input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.1);
+}
+
+.inputWrapper input::placeholder {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+}
+
+.inputError {
+    border-color: #dc2626 !important;
+}
+
+.fieldError {
+    font-size: var(--fs-xs);
+    color: #dc2626;
+}
+
+.togglePassword {
+    position: absolute;
+    right: var(--space-sm);
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: var(--space-xs);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.togglePassword:hover {
+    color: var(--color-secondary);
+}
+
+.passwordStrength {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: var(--space-xs);
+}
+
+.strengthBars {
+    display: flex;
+    gap: 4px;
+}
+
+.strengthBar {
+    width: 40px;
+    height: 4px;
+    background: var(--color-cream-d);
+    border-radius: 2px;
+    transition: background 0.2s ease;
+}
+
+.strength1 {
+    background: #ef4444;
+}
+
+.strength2 {
+    background: #f59e0b;
+}
+
+.strength3 {
+    background: #10b981;
+}
+
+.strength4 {
+    background: #059669;
+}
+
+.strengthText {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.matchSuccess {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--fs-xs);
+    color: #10b981;
+}
+
+.termsGroup {
+    margin-top: var(--space-xs);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-xs);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    cursor: pointer;
+    position: relative;
+    padding-left: 28px;
+    line-height: 1.5;
+}
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: var(--color-bg);
+    border: 2px solid var(--color-cream-d);
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.checkbox:hover .checkmark {
+    border-color: var(--color-primary);
+}
+
+.checkbox input:checked~.checkmark {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox a {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.checkbox a:hover {
+    text-decoration: underline;
+}
+
+.submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    width: 100%;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: var(--space-sm);
+}
+
+.submitBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.3);
+}
+
+.submitBtn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: var(--space-lg) 0;
+    color: var(--color-text-muted);
+    font-size: var(--fs-sm);
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-cream-d);
+}
+
+.divider span {
+    padding: 0 var(--space-md);
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-xs);
+}
+
+.loginLink {
+    font-size: var(--fs-base);
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: opacity 0.2s ease;
+}
+
+.loginLink:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: var(--space-lg);
+    }
+
+    .nameRow {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,23 @@
+.faqPreview {
+    background-color: var(--color-bg);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.questions {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.link {
+    text-align: center;
+    margin-top: var(--space-xl);
+}
+
+.link a {
+    color: var(--color-primary);
+    font-weight: 600;
+}

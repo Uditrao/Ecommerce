@@ -1,0 +1,30 @@
+# SneakerFresh Robots.txt
+
+User-agent: *
+
+# Allow all public pages
+Allow: /
+Allow: /product
+Allow: /about
+Allow: /sustainability
+Allow: /faq
+Allow: /contact
+
+# Disallow private/transactional pages
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /order-confirmation
+Disallow: /login
+Disallow: /register
+Disallow: /password-reset
+
+# Disallow admin/API routes
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://sneakerfresh.com/sitemap.xml
+
+# Crawl delay (optional, be respectful to server)
+Crawl-delay: 1

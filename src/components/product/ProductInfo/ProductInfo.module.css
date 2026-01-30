@@ -1,0 +1,177 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* Badges */
+.badges {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* Title */
+.title {
+    font-size: var(--fs-2xl);
+    margin: 0;
+}
+
+/* Rating */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+    color: var(--color-primary);
+}
+
+.ratingText {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* Tagline */
+.tagline {
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Label */
+.label {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+/* Variants */
+.variants {
+    margin-top: var(--space-sm);
+}
+
+.variantOptions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.variantBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background-color: var(--color-white);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-align: left;
+    transition: all var(--transition-fast);
+}
+
+.variantBtn:hover {
+    border-color: var(--color-text-muted);
+}
+
+.variantBtn.selected {
+    border-color: var(--color-primary);
+    background-color: hsl(152, 52%, 97%);
+}
+
+.variantName {
+    flex: 1;
+    font-weight: var(--fw-medium);
+}
+
+.variantPrice {
+    font-weight: var(--fw-semibold);
+    color: var(--color-primary);
+}
+
+.comparePrice {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+    text-decoration: line-through;
+}
+
+/* Quantity */
+.quantity {
+    margin-top: var(--space-sm);
+}
+
+.quantityControl {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.quantityControl button {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    color: var(--color-text);
+    transition: all var(--transition-fast);
+}
+
+.quantityControl button:hover:not(:disabled) {
+    background-color: var(--color-bg);
+}
+
+.quantityControl button:disabled {
+    opacity: 0.3;
+}
+
+.quantityControl span {
+    min-width: 48px;
+    text-align: center;
+    font-weight: var(--fw-medium);
+}
+
+/* Price Section */
+.priceSection {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    margin-top: var(--space-sm);
+}
+
+.price {
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+    color: var(--color-primary);
+}
+
+.savings {
+    font-size: var(--fs-sm);
+    color: var(--color-success);
+    font-weight: var(--fw-medium);
+}
+
+/* Trust Signals */
+.trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-sm);
+}
+
+.trustItem {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.trustItem svg {
+    color: var(--color-primary);
+}

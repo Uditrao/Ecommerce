@@ -1,0 +1,63 @@
+:root {
+  /* Colors - HSL for easy variation */
+  --color-charcoal-h: 193;
+  --color-charcoal-s: 8%;
+  --color-charcoal-l: 19%; /* #2D3436 */
+  
+  --color-forest-h: 150;
+  --color-forest-s: 52%;
+  --color-forest-l: 24%; /* #1E5F3E */
+  
+  --color-cream-h: 46;
+  --color-cream-s: 33%;
+  --color-cream-l: 94%; /* #F7F4ED */
+  
+  --color-mint-h: 158;
+  --color-mint-s: 48%;
+  --color-mint-l: 81%; /* #B8E6D5 */
+  
+  --color-clay-h: 31;
+  --color-clay-s: 53%;
+  --color-clay-l: 65%; /* #D4A574 */
+
+  /* Semantic Colors */
+  --color-primary: hsl(var(--color-forest-h), var(--color-forest-s), var(--color-forest-l));
+  --color-secondary: hsl(var(--color-charcoal-h), var(--color-charcoal-s), var(--color-charcoal-l));
+  --color-accent: hsl(var(--color-clay-h), var(--color-clay-s), var(--color-clay-l));
+  --color-bg: hsl(var(--color-cream-h), var(--color-cream-s), var(--color-cream-l));
+  --color-text: var(--color-secondary);
+  --color-text-muted: hsla(var(--color-charcoal-h), var(--color-charcoal-s), var(--color-charcoal-l), 0.7);
+  --color-white: #FFFFFF;
+  --color-success: hsl(var(--color-forest-h), var(--color-forest-s), var(--color-forest-l));
+
+  /* Typography */
+  --font-heading: 'Manrope', 'Outfit', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  --fs-xs: 0.75rem;   /* 12px */
+  --fs-sm: 0.875rem;  /* 14px */
+  --fs-base: 1rem;    /* 16px */
+  --fs-md: 1.125rem;  /* 18px */
+  --fs-lg: 1.25rem;   /* 20px */
+  --fs-xl: 1.5rem;    /* 24px */
+  --fs-2xl: 2rem;     /* 32px */
+  --fs-3xl: 3rem;     /* 48px */
+  --fs-4xl: 4rem;     /* 64px */
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  /* Misc */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition-fast: 200ms ease;
+  --transition-base: 300ms ease;
+  --container-max-width: 1200px;
+}

@@ -1,0 +1,46 @@
+.checkout {
+    min-height: 60vh;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.form {
+    background-color: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.placeholder {
+    text-align: center;
+    padding: var(--space-3xl);
+}
+
+.placeholder h2 {
+    margin-bottom: var(--space-sm);
+}
+
+@media (max-width: 991px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}

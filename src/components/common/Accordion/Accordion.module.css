@@ -1,0 +1,32 @@
+.accordion {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-md) 0;
+    font-weight: 600;
+    font-size: var(--fs-base);
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.icon {
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+}
+
+.icon.open {
+    transform: rotate(180deg);
+}
+
+.content {
+    padding-bottom: var(--space-md);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+}

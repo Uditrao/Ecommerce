@@ -1,0 +1,665 @@
+/* =====================================================
+   DESIGN SYSTEM - SneakerFresh Ecommerce
+   ===================================================== */
+
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* =====================================================
+     COLOR PALETTE
+     ===================================================== */
+
+  /* Primary Colors */
+  --color-primary: #1E5F3E;
+  /* Deep Forest Green */
+  --color-secondary: #2D3436;
+  /* Charcoal */
+
+  /* For HSL operations */
+  --color-forest-h: 152;
+  --color-forest-s: 52%;
+  --color-forest-l: 24%;
+  --color-clay-h: 30;
+  --color-clay-s: 45%;
+
+  /* Secondary Colors */
+  --color-mint: #B8E6D5;
+  /* Soft Mint */
+  --color-clay: #D4A574;
+  /* Warm Clay */
+
+  /* Neutral Colors */
+  --color-bg: #F7F4ED;
+  /* Off-White */
+  --color-cream: #F7F4ED;
+  /* Alias */
+  --color-border: #E5E5E5;
+  /* Light Gray */
+  --color-text-muted: #6B7280;
+  /* Medium Gray */
+  --color-white: #FFFFFF;
+
+  /* Semantic Colors */
+  --color-success: #10B981;
+  /* Success Green */
+  --color-error: #EF4444;
+  /* Error Red */
+  --color-warning: #F59E0B;
+  /* Warning Amber */
+  --color-info: #3B82F6;
+  /* Info Blue */
+
+  /* Text Colors */
+  --color-text: #2D3436;
+  /* Charcoal for body */
+
+  /* =====================================================
+     TYPOGRAPHY
+     ===================================================== */
+
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Font Sizes - Mobile First */
+  --fs-3xl: 32px;
+  /* H1 mobile */
+  --fs-2xl: 28px;
+  /* H2 mobile */
+  --fs-xl: 20px;
+  /* H3 mobile */
+  --fs-lg: 18px;
+  /* H4/Body Large */
+  --fs-base: 16px;
+  /* Body Regular */
+  --fs-sm: 14px;
+  /* Body Small */
+  --fs-xs: 12px;
+  /* Caption */
+
+  /* Line Heights */
+  --lh-heading: 1.2;
+  --lh-body: 1.6;
+  --lh-ui: 1.4;
+
+  /* Letter Spacing */
+  --ls-heading: -0.02em;
+  --ls-body: 0;
+  --ls-button: 0.01em;
+  --ls-uppercase: 0.05em;
+
+  /* Font Weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* =====================================================
+     SPACING SYSTEM (Base: 4px)
+     ===================================================== */
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+
+  /* =====================================================
+     LAYOUT
+     ===================================================== */
+
+  --container-max: 1280px;
+  --container-content: 1024px;
+  --container-narrow: 640px;
+  --container-padding: 16px;
+  /* Mobile default */
+
+  /* =====================================================
+     BORDERS & RADIUS
+     ===================================================== */
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* =====================================================
+     TRANSITIONS
+     ===================================================== */
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* =====================================================
+     SHADOWS
+     ===================================================== */
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 24px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Desktop Typography Scale */
+@media (min-width: 1025px) {
+  :root {
+    --fs-3xl: 40px;
+    /* H1 desktop */
+    --fs-2xl: 32px;
+    /* H2 desktop */
+    --fs-xl: 24px;
+    /* H3 desktop */
+    --container-padding: 40px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+/* =====================================================
+   BASE RESET & GLOBALS
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-heading);
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-size: var(--fs-3xl);
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+}
+
+h3 {
+  font-size: var(--fs-xl);
+}
+
+h4 {
+  font-size: var(--fs-lg);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  max-width: 65ch;
+  /* Max line length */
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-error {
+  color: var(--color-error);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* =====================================================
+   BUTTONS - Base Reset
+   ===================================================== */
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* =====================================================
+   IMAGES
+   ===================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   LISTS
+   ===================================================== */
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+/* =====================================================
+   FORMS - Base
+   ===================================================== */
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: var(--fs-base);
+  /* Prevents iOS zoom */
+}
+
+/* =====================================================
+   CONTAINER UTILITIES
+   ===================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+}
+
+.container-content {
+  max-width: var(--container-content);
+}
+
+/* =====================================================
+   SECTION SPACING
+   ===================================================== */
+
+.section-padding {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+@media (min-width: 1025px) {
+  .section-padding {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
+/* =====================================================
+   VISIBILITY UTILITIES
+   ===================================================== */
+
+.mobile-only {
+  display: block;
+}
+
+.tablet-up {
+  display: none;
+}
+
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 641px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .tablet-up {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .desktop-only {
+    display: block;
+  }
+}
+
+/* =====================================================
+   FOCUS STATES (Accessibility)
+   ===================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   SELECTION
+   ===================================================== */
+
+::selection {
+  background-color: var(--color-mint);
+  color: var(--color-secondary);
+}
+
+/* =====================================================
+   SCROLLBAR (Webkit)
+   ===================================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* =====================================================
+   ACCESSIBILITY - Skip Links
+   ===================================================== */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: var(--fw-medium);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* =====================================================
+   ACCESSIBILITY - Screen Reader Only
+   ===================================================== */
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* =====================================================
+   ACCESSIBILITY - Focus Management
+   ===================================================== */
+
+/* High contrast focus for keyboard users */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Focus within for composite widgets */
+.focus-within:focus-within {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   ACCESSIBILITY - Reduced Motion
+   ===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY - High Contrast Mode
+   ===================================================== */
+
+@media (prefers-contrast: high) {
+  :root {
+    --color-primary: #0d4025;
+    --color-border: #000000;
+    --color-text-muted: #1a1a1a;
+  }
+
+  button,
+  input,
+  select,
+  textarea {
+    border-width: 2px;
+  }
+}
+
+/* =====================================================
+   PRINT STYLES
+   ===================================================== */
+
+@media print {
+
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  /* Ensure readability */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* Avoid page breaks inside elements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Show link URLs */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+  }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Spacing utilities */
+.mt-0 {
+  margin-top: 0;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mt-md {
+  margin-top: var(--space-md);
+}
+
+.mb-md {
+  margin-bottom: var(--space-md);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-sm {
+  gap: var(--space-sm);
+}
+
+.gap-md {
+  gap: var(--space-md);
+}
+
+.gap-lg {
+  gap: var(--space-lg);
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

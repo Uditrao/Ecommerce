@@ -1,0 +1,99 @@
+/* =====================================================
+   CARD COMPONENT STYLES
+   Based on Design System Specification
+   ===================================================== */
+
+.card {
+    transition: all var(--transition-fast);
+}
+
+/* =====================================================
+   PADDING VARIANTS
+   ===================================================== */
+
+.padding-none {
+    padding: 0;
+}
+
+.padding-sm {
+    padding: var(--space-sm);
+}
+
+.padding-md {
+    padding: var(--space-md);
+}
+
+.padding-lg {
+    padding: var(--space-lg);
+}
+
+/* =====================================================
+   CARD VARIANTS
+   ===================================================== */
+
+/* Default Card */
+.default {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+/* Product Card */
+.product {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+}
+
+.product.hoverable:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-text-muted);
+}
+
+/* Info Card (Value Props) */
+.info {
+    background-color: var(--color-bg);
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+/* Review Card */
+.review {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    padding: 20px;
+}
+
+/* Cart Item Card */
+.cartItem {
+    background-color: var(--color-white);
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    padding: var(--space-md) 0;
+}
+
+/* =====================================================
+   MODIFIERS
+   ===================================================== */
+
+.hoverable {
+    cursor: default;
+}
+
+.hoverable:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}

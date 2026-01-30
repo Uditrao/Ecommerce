@@ -1,0 +1,48 @@
+.bar {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-lg) 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-3xl);
+    flex-wrap: wrap;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.icon {
+    opacity: 0.8;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.value {
+    font-size: var(--fs-xl);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.label {
+    font-size: var(--fs-xs);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        gap: var(--space-xl);
+    }
+
+    .value {
+        font-size: var(--fs-lg);
+    }
+}

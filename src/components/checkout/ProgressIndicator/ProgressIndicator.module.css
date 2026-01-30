@@ -1,0 +1,75 @@
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-2xl);
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    position: relative;
+}
+
+.indicator {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    background-color: var(--color-bg);
+    color: var(--color-text-muted);
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.label {
+    font-size: var(--fs-sm);
+    font-weight: 500;
+    color: var(--color-text-muted);
+}
+
+.connector {
+    width: 40px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-inline: var(--space-sm);
+}
+
+.completed .indicator {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.completed .label {
+    color: var(--color-primary);
+}
+
+.completed .connector {
+    background-color: var(--color-primary);
+}
+
+.current .indicator {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.current .label {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .label {
+        display: none;
+    }
+
+    .connector {
+        width: 24px;
+    }
+}
