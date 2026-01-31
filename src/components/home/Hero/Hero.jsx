@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Star } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const Hero = () => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+        offset: ["start start", "end start"]
+    });
+
+    // Transform scroll progress to x position and rotation
+    // x: 0 (initial position) to 500 (move to right edge)
+    // rotate: 0 to 360 (full roll)
+    const x = useTransform(scrollYProgress, [0, 1], [0, 500]);
+    const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} ref={targetRef}>
             <div className={`${styles.container} container`}>
                 <div className={styles.content}>
                     <motion.div
@@ -52,9 +64,13 @@ const Hero = () => {
 
                 <div className={styles.imageWrapper}>
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        initial={{ x: 1000, rotate: 360 }} // Start from far right, rotated
+                        animate={{ x: 0, rotate: 0 }}      // Move to 0, 0 rotation
+                        style={{ x, rotate }}              // Link scroll to these properties
+                        transition={{
+                            duration: 1.2,
+                            ease: [0.34, 1.56, 0.64, 1], // Custom spring-like easing 
+                        }}
                         className={styles.imagePlaceholder}
                     >
                         {/* Placeholder for product image */}
